@@ -11,9 +11,10 @@ function showTweet() {
 	var tweetContainer = document.createElement('article');
 	tweetContainer.className = "tweet";
 	tweetContainer.appendChild(pTweet);
-	console.log(tweetContainer);
+	//console.log(tweetContainer);
 	document.getElementById("tweets").appendChild(tweetContainer);
 	document.getElementById('tweet').value = "";
+	console.log(document.getElementById('tweets'));
 }
 
 function availableCharacters() {
@@ -21,5 +22,10 @@ function availableCharacters() {
 	var availableCharacters = 140 - tweet.length;
 	document.getElementById('submit-tweet').disabled = tweet.length > 0 ? false : true;
 	document.getElementById('available-characters').innerHTML = availableCharacters;
-
-}
+	document.getElementById('submit-tweet').disabled = availableCharacters <= 0 ? true : false;
+	if(availableCharacters <= 20 && availableCharacters > 10) {
+		document.getElementById('available-characters').style.color = 'red';
+	} else if (availableCharacters <= 10) {
+		document.getElementById('available-characters').style.color = 'blue';
+	}
+}	

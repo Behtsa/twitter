@@ -24,7 +24,7 @@ header img {
 }
 
 div {
-  background-image: url("views/background.jpg");
+  /*background-image: url("../views/background.jpg");*/
   background-color: #fff;
   display: flex;
 }
@@ -88,3 +88,4 @@ button p {
   height: 150px;
   border: .5px solid gray;
 }
+
