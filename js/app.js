@@ -4,7 +4,16 @@ document.getElementById('tweet').addEventListener('keyup',availableCharacters);
 function showTweet() {
 	document.getElementById('tweets').style.display = 'block';
 	var tweet = document.getElementById('tweet').value;
-	document.getElementById('tweet-content').innerHTML = tweet;	
+	//document.getElementById('tweet-content').innerHTML = tweet;
+	var pTweet = document.createElement('p');
+	pTweet.className = "tweet-content";
+	pTweet.innerHTML = tweet;
+	var tweetContainer = document.createElement('article');
+	tweetContainer.className = "tweet";
+	tweetContainer.appendChild(pTweet);
+	console.log(tweetContainer);
+	document.getElementById("tweets").appendChild(tweetContainer);
+	document.getElementById('tweet').value = "";
 }
 
 function availableCharacters() {
