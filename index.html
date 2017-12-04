@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
     <title>Twitter</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
       <section class="right">
          <p>¿Qué estás pasando?</p>
          <form>
-            <textarea id="tweet" name="name" rows="4" cols="50"></textarea>
+            <textarea id="tweet" name="name" rows="4" cols="50" contenteditable="true"></textarea>
          </form>
          <hr>
          <button disabled id="submit-tweet" type="button" name="TWEET"><p>TWEET</p></button>
@@ -36,6 +37,7 @@
         <p class="tweet-content"></p>
       </article>
     </section>
+    <script src="js/moment.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
